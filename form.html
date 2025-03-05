@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #d44040;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            max-height: 800px;
+            background-color: #e0f2f7;
+            padding: 20px;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto auto 1fr;
+            gap: 10px;
+        }
+
+        .header {
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .header-text {
+            border-bottom: 1px solid rgb(200, 46, 46);
+            width: 50%;
+        }
+        
+        .header-circle {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            border-radius: 50%;
+        }
+
+        .main-content {
+             grid-column: 1 / -1;
+             display: grid;
+             grid-template-columns: repeat(2, 1fr);
+             gap: 10px;
+             margin-bottom: 10px;
+             padding: 10px;
+             border: 1px solid black;
+         }
+
+        .main-content > div {
+            min-height: 100px;
+            border: 10px solid black;
+        }
+
+        .sub-content {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .sub-content > div {
+            min-height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-text">
+                <div >G.Karthik</div>
+                <div >B.E-CSE 2nd Year</div>
+            </div>
+            <div class="header-circle"></div>
+            <img src="faceprep.jpg" alt="header-circle">
+        </div>
+        <div class="main-content">
+            <div class="main-content">hi I am Karthik</div>
+            <div>About me:</div>
+            <p>
+                hello
+            </p>
+        </div>
+        <div class="sub-content">
+            <div>Education:</div>
+            <div>Experience:</div>
+            <div>Address:</div>
+        </div>
+    </div>
+</body>
+</html>
